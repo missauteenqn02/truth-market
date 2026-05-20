@@ -54,7 +54,7 @@ Respond ONLY with the JSON, no other text."""
             result = gl.exec_prompt(task).replace("```json", "").replace("```", "")
             return json.dumps(json.loads(result), sort_keys=True)
 
-        result_json = gl.eq_principle.strict_eq(resolution_engine)
+        result_json = gl.eq_principle_strict_eq(resolution_engine)
         return result_json
 
     @gl.public.write
